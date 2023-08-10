@@ -23,7 +23,7 @@ export default function Home() {
     // const redirectTolink = () => {
     //   // window.location.href = 'https://instagram.com/_igdivyansh?igshid=MzNlNGNkZWQ4Mg==';  this funcution is use for open link in same window
     // }
-    const redirectTolink = (url) => {
+    const redirectTolink = (url : string) => {
       if (typeof window !== 'undefined') {
         window.open(url, '_blank');
       } else {
@@ -44,7 +44,7 @@ export default function Home() {
            onClick={() => setDarkMode(!darkMode)}
            className='cursor-pointer text-2xl'/>
           </li>
-          <li><a className='bg-gradient-to-r from-cyan-500 to-orange-700 text-white px-4 py-2 rounded-md ml-8' href="" onClick={() => redirectTolink('https://drive.google.com/file/d/17l0NOHBEXJOLnxXkdb7Lczi0CP6iEbl2/view?usp=drive_link')}>Resume</a></li>
+          <li><a className='bg-gradient-to-r from-cyan-500 to-orange-700 text-white px-4 py-2 rounded-md ml-8' href=""  onClick={() => redirectTolink('https://drive.google.com/file/d/17l0NOHBEXJOLnxXkdb7Lczi0CP6iEbl2/view?usp=drive_link')}>Resume</a></li>
         </ul>
       </nav>
       <div className='text-center p-10 '>
@@ -59,7 +59,7 @@ export default function Home() {
       <AiFillLinkedin onClick={() => redirectTolink('https://www.linkedin.com/in/divyanshu-tailor-106570266')} />
       </div>
       <div className='relative mx-auto bg-gradient-to-b from-orange-700 rounded-full w-80 h-80 mt-20 mb-10 overflow-hidden md:h-96 md:w-96'>
-        <Image src={dev} layout='fill' objectFit='cover'/>
+        <Image src={dev} layout='fill' objectFit='cover' alt=''/>
       </div>
      </section>
 
@@ -79,7 +79,7 @@ export default function Home() {
 
         <div  className="lg:flex gap-10">
         <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <div className='flex justify-center items-center pt-12'><Image src={design} width={100} height={100} /></div>
+              <div className='flex justify-center items-center pt-12'><Image src={design} width={100} height={100} alt='' /></div>
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Beautiful Designs
               </h3>
@@ -94,7 +94,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-            <div className='flex justify-center items-center pt-12'><Image src={code} width={100} height={100} /></div>
+            <div className='flex justify-center items-center pt-12'><Image src={code} width={100} height={100} alt=''/></div>
               <h3 className="text-lg font-medium pt-8 pb-2 ">
                 Code your dream project
               </h3>
@@ -109,7 +109,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-            <div className='flex justify-center items-center pt-12'><Image src={consulting} width={100} height={100} /></div>
+            <div className='flex justify-center items-center pt-12'><Image src={consulting} width={100} height={100} alt='' /></div>
               <h3 className="text-lg font-medium pt-8 pb-2 ">Consulting</h3>
               <p className="py-2">
                 Are you interested in feedback for your current project? I can
@@ -142,57 +142,63 @@ export default function Home() {
             </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <div className="basis-1/3 flex-1 ">
-              <Image
+            <Image
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={100}
+                height={100}
                 layout="responsive"
                 src={web1}
+                alt=''
               />
             </div>
             <div className="basis-1/3 flex-1">
               <Image
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={100}
+                height={100}
                 layout="responsive"
                 src={web2}
+                alt=''
               />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
+            <Image
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={100}
+                height={100}
                 layout="responsive"
                 src={web3}
+                alt=''
               />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
+            <Image
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={100}
+                height={100}
                 layout="responsive"
                 src={web4}
+                alt=''
               />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
+            <Image
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={100}
+                height={100}
                 layout="responsive"
                 src={web5}
+                alt=''
               />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
+            <Image
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={100}
+                height={100}
                 layout="responsive"
                 src={web6}
+                alt=''
               />
             </div>
           </div>
